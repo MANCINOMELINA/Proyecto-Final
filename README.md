@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 3785baa1ecc96e74d08c1f84545d70337f4d2a1d
 ## Pre-entrega 3 Proyecto Final 
 
 ### Alumnos: Mancino Melina, Sandoval Valentín
