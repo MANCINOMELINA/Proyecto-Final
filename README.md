@@ -37,9 +37,3 @@ Se crea un proyecto basado en un centro de Pilates, donde los usuarios podrán v
 12- Ingresando a crear profesor, por el momento solo permite ingresar en nombre.
 
 13- Próximos pasos, agregar un form para alta de alumnos, login y mejorar las opciones actuales.
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 3785baa1ecc96e74d08c1f84545d70337f4d2a1d
