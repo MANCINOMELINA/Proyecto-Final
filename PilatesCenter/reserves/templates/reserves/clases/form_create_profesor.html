@@ -1,0 +1,12 @@
+{% extends 'reserves/home.html' %} {% load static %} {% block content %}
+<link
+  rel="stylesheet"
+  href="{% static 'reserves/styles_create_form_clases.css' %}"
+/>
+<div class="form-container">
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Guardar</button>
+  </form>
+</div>
+{% endblock %}

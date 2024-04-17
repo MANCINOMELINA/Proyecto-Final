@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalle del Reservas</title>
+    <link rel="stylesheet" href="{% static 'reserves/stylesdetail.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Detalle de Reservas</h1>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="/reserves/list">Volver</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      {% block content %}
+      <div class="reserves-info">
+        <h2>{{ clases.nivel }}</h2>
+        <p>{{ clases.descripcion }}</p>
+        <p>Fecha Inicio Reserva: {{ clases.fecha_inicio | date:"Y-m-d" }}</p>
+        <p>Fecha Fin Reserva: {{ clases.fecha_fin | date:"Y-m-d" }}</p>
+        <h3>Estado: {{ clases.estado }}</h3>
+        {% comment %} <h3>Plazo: {{ clases.diferencia_año }} meses</h3> {% endcomment %}
+        <!-- Aquí puedes agregar más información sobre el proyecto -->
+      </div>
+    </main>
+  </body>
+</html>
+{% endblock %}

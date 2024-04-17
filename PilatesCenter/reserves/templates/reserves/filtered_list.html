@@ -1,0 +1,23 @@
+{% extends 'reserves/home.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'reserves/styleshome.css' %}" />
+<div class="clase-container">
+  {% for clase in clases %}
+  <div class="clase">
+    <div class="clase-header">
+      <span class="tag">{{ clase.profesor }}</span>
+      <span class="tag">{{ clase.suplente }}</span>
+    </div>
+    <h2>{{ clase.nivel }}</h2>
+    <p>{{ clase.descripcion }}</p>
+    <div class="clase-footer">
+      <h3 data-estado="{{ clase.estado }}">{{ clase.estado }}</h3>
+      <a href="{% url 'detail_view' clase.id %}" class="btn-detail"
+        >Ver Detalle</a
+      >
+    </div>
+  </div>
+  {% empty %}
+  <p>No hay reservas disponibles.</p>
+  {% endfor %}
+</div>
+{% endblock %}

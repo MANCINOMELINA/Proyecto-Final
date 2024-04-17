@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilates Center</title>
+    <link rel="stylesheet" href="{% static 'reserves/styleshome.css' %} " />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Bienvenidos a Pilates Center</h1>
+      </div>
+    </header>
+    <nav>
+      <ul><!-- Pedir crear dropdown -->
+        <li>
+          <a href="/reserves/list">Reservas</a>
+        </li>
+        <li>
+          <a href="/admin/">Admin</a>
+        </li>
+        <li>
+          <a href="/reserves/create/clases/">Crear Reserva</a>
+        </li>
+        <li>
+          <a href="/reserves/create/profesor/">Crear Profesor</a>
+        </li>
+      </ul>
+    </nav>
+    <main>{% block content %} {% endblock content %}</main>
+    </div>
+  </body>
+</html>

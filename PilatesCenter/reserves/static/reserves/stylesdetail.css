@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #c4d9dd;
+  }
+  
+  /* Estilos para el encabezado */
+  .header-container {
+    background-color: #1d292f;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  /* Estilos para la barra de navegación */
+  nav {
+    background-color: #374b53;
+    color: #fff;
+    padding: 8px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav li {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none; /* Eliminar el subrayado */
+  }
+  
+  /* Estilos para el hover de las etiquetas li */
+  nav li:hover a {
+    color: yellow;
+    font-size: 1.01em; /* Incrementar el tamaño del texto */
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .reserves-info {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reserves-info h2 {
+    margin-bottom: 10px;
+  }
+  
+  .reserves-info p {
+    margin-bottom: 10px;
+  }
+  
+  .reserves-info h3 {
+    font-size: 16px;
+    color: green;
+  }
+  
