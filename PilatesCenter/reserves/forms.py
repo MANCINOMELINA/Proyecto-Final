@@ -1,5 +1,6 @@
 from django import forms
-from .models import Profesor, Suplente, Estado, Clase
+from .models import Profesor, Clase
+from django.contrib.auth.models import User
 
 class ClaseCreateForm(forms.ModelForm):
     class Meta:
@@ -20,3 +21,9 @@ class ProfesorCreateForm(forms.ModelForm):
         model = Profesor
         fields = ['nombre']
         labels = {'profesor': 'Seleccionar el profesor'}
+        
+
+class UserEditForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['username', 'first_name', 'last_name', 'email']        

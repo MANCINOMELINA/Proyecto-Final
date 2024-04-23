@@ -19,7 +19,7 @@ from django.urls import path, include
 from django.http import HttpResponse
 
 def mi_func(xx):
-    return HttpResponse("<h1>Bienvenidos Pilates Center<h1>")
+    return HttpResponse("<h1>Bienvenidos a Pilates Center<h1>")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
