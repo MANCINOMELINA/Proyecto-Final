@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from django.contrib.auth.models import User
 
 class Profesor(models.Model):
     nombre = models.CharField(max_length=20)
@@ -39,3 +40,11 @@ class Clase(models.Model):
         mes_clase_inicio = self.fecha_inicio.month
         diferencia = mes_clase_fin - mes_clase_inicio
         return diferencia
+    
+    
+class Avatar(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='avatar')
+    image = models.ImageField(upload_to='avatars/')
+
+    def __str__(self):
+        return f"Avatar for {self.user.username}"

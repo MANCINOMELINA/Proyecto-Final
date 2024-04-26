@@ -12,6 +12,7 @@ from .views import (
     user_creation_view,
     user_logout_view,
     UserUpdateView,
+    avatar_view,
 )
 
 urlpatterns = [
@@ -27,4 +28,5 @@ urlpatterns = [
     path("login/", user_login_view, name ="login"),
     path("logout/", user_logout_view, name ="logout"),
     path('editar-perfil/', UserUpdateView.as_view(), name ='editar-perfil'),
+    path('avatar/add/', avatar_view, name='avatar_add'),
 ]

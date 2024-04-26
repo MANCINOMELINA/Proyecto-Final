@@ -1,5 +1,5 @@
 from django import forms
-from .models import Profesor, Clase
+from .models import Profesor, Clase, Avatar
 from django.contrib.auth.models import User
 
 class ClaseCreateForm(forms.ModelForm):
@@ -26,4 +26,10 @@ class ProfesorCreateForm(forms.ModelForm):
 class UserEditForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['username', 'first_name', 'last_name', 'email']        
+        fields = ['username', 'first_name', 'last_name', 'email']   
+        
+        
+class AvatarCreateForm(forms.ModelForm):
+    class Meta:
+        model = Avatar
+        fields = ['image']             

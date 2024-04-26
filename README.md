@@ -37,9 +37,12 @@ Se crea un proyecto basado en un centro de Pilates, donde los usuarios podrán v
 12- Ingresando a crear profesor, por el momento solo permite ingresar en nombre.
 
 13- Próximos pasos, agregar un form para alta de alumnos, login y mejorar las opciones actuales.
-<<<<<<< HEAD
 
 
+Para Avatar instalar "python -m pip install Pillow"
 
-=======
->>>>>>> 2015fe1fb57ae195e46b8037214dfb847ab3a346
+Permisos analista:
+user: Analista_PILATES
+pass: PilatesCenter2024
+
+

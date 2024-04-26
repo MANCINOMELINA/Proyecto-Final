@@ -9,6 +9,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from .forms import UserEditForm
+from .models import Avatar
+from .forms import AvatarCreateForm
+
 
 
 
@@ -95,3 +98,24 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
 
     def get_object(self):
         return self.request.user   
+    
+    
+def avatar_view(request):
+    if request.method == "GET":
+        contexto = {"imagen": AvatarCreateForm()}
+    else:
+        form = AvatarCreateForm(request.POST, request.FILES)
+        if form.is_valid():
+            image = form.cleaned_data["image"]
+            avatar_existente = Avatar.objects.filter(user=request.user)
+            avatar_existente.delete()
+            nuevo_avatar = Avatar(image=image, user=request.user)
+            nuevo_avatar.save()
+            return redirect("home")
+        else:
+            contexto = {"imagen": form}
+
+
+    return render(request, "reserves/avatar_create.html", context=contexto)    
+    
+    
