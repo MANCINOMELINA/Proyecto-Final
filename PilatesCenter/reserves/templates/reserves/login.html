@@ -6,19 +6,84 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <div class="card mt-5">
-        <div class="card-header">
-          Login
+      <div class="card mt-5 login-container">
+        <div class="card-header login-header">
+          Iniciar sesión
         </div>
         <div class="card-body">
-          <form method="POST" action="{% url 'login' %}" class="text-center">
+          <form method="POST" action="{% url 'login' %}">
             {% csrf_token %}
-            {{ loguear.as_p }}
-            <button type="submit" class="btn btn-primary">Login</button>
+            <div class="form-group">
+              <label for="username">Nombre de Usuario:</label>
+              <input type="text" id="username" name="username" class="form-control login-input">
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password" class="form-control login-input">
+            </div>
+            <input type="submit" class="btn btn-primary login-button" value="Login">
           </form>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  /* Reset CSS básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+    background-color: #217544;
+  }
+
+  /* Estilos para el contenedor principal */
+  .login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+
+  /* Estilos para el título */
+  .login-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #217544;
+  }
+
+  /* Estilos para los campos de entrada */
+  .login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  /* Estilos para el botón de inicio de sesión */
+  .login-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #217544;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  /* Estilos para el botón de inicio de sesión al pasar el cursor */
+  .login-button:hover {
+    background-color: #73c9a6;
+  }
+</style>
 {% endblock %}
