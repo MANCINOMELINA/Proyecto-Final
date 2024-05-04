@@ -24,6 +24,37 @@
     .nav-item {
       margin-right: 15px; /* Espacio entre elementos */
     }
+
+    footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40; /* Cambiar el color de fondo */
+    color: #ffffff; /* Cambiar el color del texto */
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer p {
+    margin: 0; /* Eliminar el margen del párrafo */
+  }
+
+  footer button {
+    background-color: #dc3545; /* Cambiar el color de fondo del botón */
+    color: #ffffff; /* Cambiar el color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+
+  footer button:hover {
+    background-color: #c82333; /* Cambiar el color de fondo del botón al pasar el mouse */
+  }
   </style>
 </head>
 <body>
@@ -72,5 +103,13 @@
     </ul>
   </nav>
   <main>{% block content %} {% endblock content %}</main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Pilates Center</p>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'nosotros' %}">Acerca de Nosotros</a>
+    </li>
+</footer>
 </body>
 </html>

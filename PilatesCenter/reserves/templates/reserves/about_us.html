@@ -1,0 +1,59 @@
+{% extends 'reserves/home.html' %}
+
+{% block title %}Acerca de Nosotros{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8"> <!-- Cambié el tamaño de la columna a col-md-8 para que la tarjeta sea más ancha -->
+            <div class="card mt-5 login-container">
+                <div class="card-header login-header">
+                    Acerca de Nosotros
+                </div>
+                <div class="card-body">
+                    <p>Somos el Pilates Center, un lugar dedicado al bienestar y la salud a través del método Pilates. Nuestro equipo está formado por profesionales capacitados y dedicados a brindar la mejor experiencia a nuestros clientes.</p>
+                    <p>En Pilates Center, nos esforzamos por ofrecer clases de calidad, adaptadas a las necesidades individuales de cada persona. Nuestro objetivo es ayudar a nuestros clientes a mejorar su fuerza, flexibilidad y equilibrio, mientras disfrutan de un ambiente acogedor y amigable.</p>
+                    <p>¡Gracias por ser parte de nuestra comunidad!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+  /* Reset CSS básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+    background-color: #217544;
+  }
+
+  /* Estilos para el contenedor principal */
+  .login-container {
+    max-width: 600px; /* Aumenté el ancho máximo de la tarjeta a 600px */
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+
+  /* Estilos para el título */
+  .login-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #217544;
+  }
+
+  /* Estilos para los párrafos */
+  .login-body p {
+    margin-bottom: 20px;
+    color: #217544;
+  }
+</style>
+{% endblock %}

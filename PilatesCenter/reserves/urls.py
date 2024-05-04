@@ -13,6 +13,7 @@ from .views import (
     user_logout_view,
     UserUpdateView,
     avatar_view,
+    about_us,
 )
 
 urlpatterns = [
@@ -29,4 +30,5 @@ urlpatterns = [
     path("logout/", user_logout_view, name ="logout"),
     path('editar-perfil/', UserUpdateView.as_view(), name ='editar-perfil'),
     path('avatar/add/', avatar_view, name='avatar_add'),
+    path('about_us/', about_us, name='nosotros'),
 ]

@@ -145,3 +145,36 @@ nav li:hover a {
   color: #73c9a6;
   font-size: 1.01em; /* Incrementar el tamaño del texto */
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #343a40; /* Cambiar el color de fondo */
+  color: #ffffff; /* Cambiar el color del texto */
+  padding: 3px 4px;
+  text-align: center;
+  position: fixed;
+  bottom: 1rem;
+  width: 100%;
+}
+
+footer p {
+  margin: 0; /* Eliminar el margen del párrafo */
+}
+
+footer .btn-about-us {
+  color: #011a10;
+  padding: 3px 4px; /* Ajustar el tamaño del botón */
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #dc3545; /* Cambiar el color de fondo del botón */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease, font-size 0.3s ease; /* Transición suave */
+}
+
+footer .btn-about-us:hover {
+  color: #73c9a6;
+  font-size: 1.01em; /* Incrementar el tamaño del texto */
+}

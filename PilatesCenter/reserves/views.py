@@ -118,4 +118,5 @@ def avatar_view(request):
 
     return render(request, "reserves/avatar_create.html", context=contexto)    
     
-    
+def about_us(request):
+    return render(request, 'reserves/about_us.html')
